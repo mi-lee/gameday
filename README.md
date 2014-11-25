@@ -54,4 +54,4 @@ To find the vignette associated with this package, you can look it up on the R c
 browseVignettes(package = "gameday")
 ```
 
-You can also find the vignette for this package [here](http://127.0.0.1:16051/library/gameday/doc/overview.html)! 
+You can also find the vignette for this package [here](http://127.0.0.1:16051/session/Rvig.14e51ecb3117.html).

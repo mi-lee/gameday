@@ -58,4 +58,3 @@ knitr::kable(scores(Sys.Date()), format="markdown")
 
 `gday` checks whether you have an Internet connection, whether the team name entered is a string, and whether the date entered is in date format. 
 `scores` checks whether you have an Internet connection, and whether the date is in proper date format. 
-
