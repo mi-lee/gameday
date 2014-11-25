@@ -13,5 +13,6 @@ Imports:
     RCurl,
     assertthat,
     testthat,
-    lubridate
+    lubridate,
+    knitr
 VignetteBuilder: knitr
