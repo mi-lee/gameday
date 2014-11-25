@@ -1,0 +1,61 @@
+---
+title: "Overview of Gameday"
+author: "Michelle Lee"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Overview of Gameday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+---
+
+# Introduction
+
+Gameday can answer these questions:
+
+- Does my team play today?
+- Does my team play tomorrow?
+- What is the score for the game today?
+- What is the score for the game on Nov 3, 2014?
+
+
+# Loading the package
+
+```{r}
+library(gameday)
+```
+
+# gday
+
+`gday` checks whether the specified team played on a specified date. The default for team is the Vancouver Canucks; the default for the date is today's date. For example,
+
+```{r}
+gday()
+```
+
+If we wanted to check if the Canucks played on 2014-11-03:
+
+```{r}
+gday("Canucks", "2014-11-03")
+```
+
+Team name is case insensitive:
+
+```{r}
+gday("CANUCKS")
+```
+
+
+# scores()
+
+This function returns a data frame with 4 columns: the home team name, away team name, home team score, and away team score. The default for date is today's date. For example:
+
+```{r}
+knitr::kable(scores(Sys.Date()), format="markdown")
+```
+
+# Pitfalls
+
+`gday` checks whether you have an Internet connection, whether the team name entered is a string, and whether the date entered is in date format. 
+`scores` checks whether you have an Internet connection, and whether the date is in proper date format. 
+
